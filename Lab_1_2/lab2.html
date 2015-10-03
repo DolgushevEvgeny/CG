@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Garage</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="canvasjs-1.7.0/canvasjs.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="InsertButton.css">
+    <script src='InsertButton.js'></script>
+    <!--<link href="style.css" rel="stylesheet" type="text/css" />-->
+  </head>
+  <body onload="GetFromLocalStorage(), DrawOnCanvas()">
+  <div class="table-responsive">
+  <input type="button" onclick="AddRow(), SaveToLocalStorage()" value="Add Row">
+  <input type="button" onclick="SaveToLocalStorage()" value="Save">
+  <input type="button" onclick="ConvertToJSON()" value="Export to JSON">
+  <input type="button" id="click-elem" value="About">
+  <input type='button' onclick="DrawPieChart()" value='PieChart'>
+  <div class="overlay" id="overlay" style="display:none;"></div>
+  <div class="nonebox" id="nonebox">
+      <a class="box-close" id="box-close" href="#"></a>
+      <canvas id='canvas' width="450" height="450"></canvas>
+  </div>
+  <table onmouseout="SaveToLocalStorage()" id = 'mainTable' class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Код машины</th>
+        <th>Марка</th>
+        <th>Модель</th>
+        <th>Год выпуска</th>
+        <th>Пробег</th>
+        <th>Объем двигателя</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--<tr>
+        <td contenteditable="true"> 01234 </td>
+        <td contenteditable="true"> Chevrolet </td>
+        <td contenteditable="true"> Cruze </td>
+        <td contenteditable="true"> 2013 </td>
+        <td contenteditable="true"> 10345 </td>
+        <td contenteditable="true"> 2.2 </td>
+      </tr>
+      <tr>
+        <td contenteditable="true"> 01235 </td>
+        <td contenteditable="true"> Mazda </td>
+        <td contenteditable="true"> RX-7 </td>
+        <td contenteditable="true"> 2005 </td>
+        <td contenteditable="true"> 24060 </td>
+        <td contenteditable="true"> 2.2 </td>
+      </tr>
+      <tr>
+        <td contenteditable="true"> 01240 </td>
+        <td contenteditable="true"> Ваз </td>
+        <td contenteditable="true"> 2121 </td>
+        <td contenteditable="true"> 2002 </td>
+        <td contenteditable="true"> 35000 </td>
+        <td contenteditable="true"> 1.8 </td>
+      </tr>-->
+    </tbody>
+  </table>
+  </div>
+  <canvas id='pieChart' width='600' height='600'></canvas>
+</body>
+</html>
