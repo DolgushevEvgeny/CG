@@ -4,14 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Garage</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="jquery-1.7.2.js"></script>
     <script type="text/javascript" src="canvasjs-1.7.0/canvasjs.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="InsertButton.css">
-    <script src='InsertButton.js'></script>
-    <!--<link href="style.css" rel="stylesheet" type="text/css" />-->
+    <script src='Functions.js'></script>
   </head>
-  <body onload="GetFromLocalStorage(), DrawOnCanvas()">
+  <body onload="GetFromLocalStorage(), DrawOnCanvas(), FillData()">
   <div class="table-responsive">
   <input type="button" onclick="AddRow(), SaveToLocalStorage()" value="Add Row">
   <input type="button" onclick="SaveToLocalStorage()" value="Save">
@@ -35,33 +34,10 @@
       </tr>
     </thead>
     <tbody>
-      <!--<tr>
-        <td contenteditable="true"> 01234 </td>
-        <td contenteditable="true"> Chevrolet </td>
-        <td contenteditable="true"> Cruze </td>
-        <td contenteditable="true"> 2013 </td>
-        <td contenteditable="true"> 10345 </td>
-        <td contenteditable="true"> 2.2 </td>
-      </tr>
-      <tr>
-        <td contenteditable="true"> 01235 </td>
-        <td contenteditable="true"> Mazda </td>
-        <td contenteditable="true"> RX-7 </td>
-        <td contenteditable="true"> 2005 </td>
-        <td contenteditable="true"> 24060 </td>
-        <td contenteditable="true"> 2.2 </td>
-      </tr>
-      <tr>
-        <td contenteditable="true"> 01240 </td>
-        <td contenteditable="true"> Ваз </td>
-        <td contenteditable="true"> 2121 </td>
-        <td contenteditable="true"> 2002 </td>
-        <td contenteditable="true"> 35000 </td>
-        <td contenteditable="true"> 1.8 </td>
-      </tr>-->
     </tbody>
   </table>
   </div>
-  <canvas id='pieChart' width='600' height='600'></canvas>
+  <canvas id='pieChart' width='400' height='300'></canvas>
+  <canvas id="help" class="help left"> Update browser</canvas>
 </body>
 </html>
